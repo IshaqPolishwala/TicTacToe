@@ -123,3 +123,4 @@ function setCanvasSize() {
         canvas.height = window.innerWidth - 30;
     }
 }
+ 
