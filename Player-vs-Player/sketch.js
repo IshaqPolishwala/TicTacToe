@@ -114,13 +114,12 @@ function drawGrid() {
 }
 
 function setCanvasSize() {
-    if(window.innerWidth > window.outerHeight) {
-        canvas.width = 540;
-        canvas.height = 540;
+    if(window.innerWidth > window.innerHeight) {
+        canvas.width = window.innerHeight - 230;
+        canvas.height = window.innerHeight - 230;
     }
     else {
         canvas.width = window.innerWidth - 30;
         canvas.height = window.innerWidth - 30;
     }
 }
- 

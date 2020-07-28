@@ -1,6 +1,8 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
+setCanvasSize();
+
 const dim = canvas.width;       // Length of board
 const cDim = dim / 3;           // Length of cell
 
@@ -174,4 +176,15 @@ function drawGrid() {
     ctx.moveTo(3, cDim*2);
     ctx.lineTo(dim-3, cDim*2);
     ctx.stroke();
+}
+
+function setCanvasSize() {
+    if(window.innerWidth > window.innerHeight) {
+        canvas.width = window.innerHeight - 230;
+        canvas.height = window.innerHeight - 230;
+    }
+    else {
+        canvas.width = window.innerWidth - 30;
+        canvas.height = window.innerWidth - 30;
+    }
 }
