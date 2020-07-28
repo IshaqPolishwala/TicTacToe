@@ -2,6 +2,7 @@ const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
 if(window.innerWidth < 500) {
+    alert(window.innerWidth);
     canvas.width = 400;
     canvas.height = 400;
 }
