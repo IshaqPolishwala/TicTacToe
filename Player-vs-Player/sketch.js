@@ -1,13 +1,7 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
-document.getElementById("result").innerHTML = window.innerWidth +" "+ window.outerWidth +" "+ screen.width + "<br>" + window.innerHeight +" "+ window.outerHeight +" "+ screen.height;
-
-// if(window.innerWidth < 500) {
-//     alert(window.innerWidth);
-//     canvas.width = 400;
-//     canvas.height = 400;
-// }
+setCanvasSize();
 
 const dim = canvas.width;       // Length of board
 const cDim = dim / 3;           // Length of cell
@@ -117,4 +111,15 @@ function drawGrid() {
     ctx.moveTo(3, cDim*2);
     ctx.lineTo(dim-3, cDim*2);
     ctx.stroke();
+}
+
+function setCanvasSize() {
+    if(window.innerWidth > window.outerHeight) {
+        canvas.width = 540;
+        canvas.height = 540;
+    }
+    else {
+        canvas.width = window.innerWidth - 30;
+        canvas.height = window.innerWidth - 30;
+    }
 }
