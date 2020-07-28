@@ -1,7 +1,7 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
-document.getElementById("result").innerHTML = window.innerWidth +" "+ window.outerWidth +""+ screen.width;
+document.getElementById("result").innerHTML = window.innerWidth +" "+ window.outerWidth +" "+ screen.width;
 
 if(window.innerWidth < 500) {
     alert(window.innerWidth);
