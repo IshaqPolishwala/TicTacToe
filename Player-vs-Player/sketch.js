@@ -1,13 +1,13 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
-alert(window.innerWidth);
+document.getElementById("result").innerHTML = window.innerWidth +" "+ window.outerWidth +" "+ screen.width + "<br>" + window.innerHeight +" "+ window.outerHeight +" "+ screen.height;
 
-if(window.innerWidth < 500) {
-    alert(window.innerWidth);
-    canvas.width = 400;
-    canvas.height = 400;
-}
+// if(window.innerWidth < 500) {
+//     alert(window.innerWidth);
+//     canvas.width = 400;
+//     canvas.height = 400;
+// }
 
 const dim = canvas.width;       // Length of board
 const cDim = dim / 3;           // Length of cell
