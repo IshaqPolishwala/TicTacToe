@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> TicTacToe </title>
+        <style>
+            body {
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .btns-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 80vh;
+            }
+
+            .btns {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 16vh;
+            }
+
+            button {
+                border: 2px solid #252424;
+                font-size: 1.5rem;
+                font-weight: 700;
+                font-family: monospace;
+                background-color: white;
+                padding: 15px 20px;
+                border-radius: 10px;
+                transition: all 0.3s ease-in-out;
+                user-select: none;
+            }
+
+            button:hover {
+                background-color: #252424;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="result"> &nbsp; </h1>
+        <canvas id="myCanvas" width=540 height=540></canvas>
+        <div class="btns-container btns">
+            <button onclick="location.reload()"> Play again! </button>
+        </div>
+    </body>
+    <script src="sketch.js"></script>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> TicTacToe </title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+                font-family: Poppins;
+            }
+
+            body {
+                height: 100vh;
+            }
+
+            .title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-weight: 800;
+                font-size: 6rem;
+
+                text-decoration: underline;
+                text-decoration-color: #36afe7;
+                user-select: none;
+            }
+
+            .btns-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 80vh;
+            }
+
+            .btns {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 20vh;
+            }
+
+            button {
+                border: 2px solid #36afe7;
+                font-size: 1.8rem;
+                font-weight: 700;
+                font-family: monospace;
+                background-color: white;
+                padding: 15px 25px;
+                border-radius: 10px;
+                transition: all 0.3s ease-in-out;
+                user-select: none;
+            }
+
+            button:hover {
+                background-color: #36afe7;
+                color: white;
+            }
+
+            .footer {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding-bottom: 2vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+            }
+
+            #logo {
+                width: 5vw;
+            }
+
+            @media (max-device-width: 768px) {
+                #logo {
+                width: 10vw;
+                }
+
+                .footer {
+                font-size: 4vw;
+                }
+                .title {
+                font-size: 8vw;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="btns-container">
+            <span class="title">
+                <img
+                    id="logo"
+                    src="assets/tic-tac-toe.svg"
+                style="margin-right: 3vw;"
+                />
+                TicTacToe
+        </span>
+
+            <div class="btns">
+                <button onclick="window.location.href = 'Player-vs-AI/index.html'">
+                    Player vs AI
+                </button>
+                <button onclick="window.location.href = 'Player-vs-Player/index.html'">
+                    Player vs Player
+                </button>
+            </div>
+        </div>
+        <div class="footer">
+            Made with
+            <img
+                src="assets/heart.svg"
+                width="20vw"
+                style="margin-left: 0.7ch; margin-right: 0.7ch;"
+            />
+            by Ishaq Polishwala
+        </div>
+    </body>
+</html>
