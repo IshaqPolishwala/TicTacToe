@@ -15,8 +15,8 @@ const board = [
 drawGrid();
 
 function handleClick(e) {
-    let x = e.clientX - canvas.offsetLeft;
-    let y = e.clientY - canvas.offsetTop;
+    let x = e.pageX - canvas.offsetLeft;
+    let y = e.pageY - canvas.offsetTop;
     let i = Math.floor(y/cDim);
     let j = Math.floor(x/cDim);
     
@@ -33,11 +33,11 @@ function handleClick(e) {
             ctx.strokeStyle = "red";
             ctx.stroke();
             document.getElementById("result").innerHTML = (result=="X" ? "Player" : "AI") + " wins!";
-            document.getElementById("myCanvas").removeEventListener("click", handleClick);
+            canvas.removeEventListener("click", handleClick);
         }
     }
 }
-document.getElementById("myCanvas").addEventListener("click", handleClick);
+canvas.addEventListener("click", handleClick);
 
 const scores = {
     "X": -1,

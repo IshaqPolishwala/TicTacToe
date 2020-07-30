@@ -17,8 +17,8 @@ const board = [
 drawGrid();
 
 function handleClick(e) {
-    let x = e.clientX - canvas.offsetLeft;
-    let y = e.clientY - canvas.offsetTop;
+    let x = e.pageX - canvas.offsetLeft;
+    let y = e.pageY - canvas.offsetTop;
     let i = Math.floor(y/cDim);
     let j = Math.floor(x/cDim);
     
@@ -29,7 +29,7 @@ function handleClick(e) {
         player = !player;
     }
 }
-document.getElementById("myCanvas").addEventListener("click", handleClick);
+canvas.addEventListener("click", handleClick);
 
 const equals3 = (a, b, c) => (a==b && b==c && a!="");
 
@@ -66,7 +66,7 @@ function checkWinner() {
     
     if(winner != null) {
         document.getElementById("result").innerHTML = "Player " + (winner ? "1" : "2") + " wins!";
-        document.getElementById("myCanvas").removeEventListener("click", handleClick);
+        canvas.removeEventListener("click", handleClick);
     }
     else if(count == 9)
         document.getElementById("result").innerHTML = "It's a Tie!";
